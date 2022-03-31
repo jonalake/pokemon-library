@@ -4,7 +4,7 @@ const ul = document.querySelector("ul")
 // create "hidden class" display: none
 // right before append hide image
 
-fetch("https://pokeapi.co/api/v2/pokemon?limit=50")
+fetch("https://pokeapi.co/api/v2/pokemon?limit=50&offset=3")
     .then(response => response.json())
     .then((response) => {
         const pokemonList = response.results

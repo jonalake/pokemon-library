@@ -18,10 +18,31 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${queryString.get("pokemon")}`)
             </figure>
 
             <h2>Abilities</h2>
-            <ul class="abilities">
-            </ul>
         `;
+        main.append(pokemonDetails);
+        const abilitiesRequests = response.abilities
+            .map(response => response.ability.url)
+            .map(url => {
+                return fetch(url).then(response => response.json())
+            })
+        return Promise.all(abilitiesRequests)
+    }).then(responses => {
+        console.log(responses)
+        const ul = document.createElement("ul")
+        ul.classList = "abilities"
+        main.append(ul)
+        responses.map(response => {
+            const li = document.createElement("li")
+            li.innerHTML = `
+                <span class="ability-name">${response.name[0].toUpperCase()}${response.name.slice(1)}</span>
+                <span class="ability-short-description">${response.effect_entries[1].short_effect}</span> 
+                `
+            return li;
+        }).forEach(li => {
+            ul.append(li)
+        })
         const spinner = document.querySelector(".spinner")
         spinner.classList.add("hidden")
-        main.append(pokemonDetails);
+
+
     })
