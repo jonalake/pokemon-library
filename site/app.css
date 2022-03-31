@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
 
 * {
-    font-family: 'Press Start 2P', cursive;
     text-align: center;
 }
 
-a {
+h1 > a {
+    font-family: 'Pokemon Solid', sans-serif;
     text-decoration: none;
-    color: blue;
+    font-size: 72px;
+}
+
+a {
+    color: black;
 }
 
 a:visited {
-    color: blue;
+    color: black;
 }
 
 .spinner {
@@ -60,5 +65,11 @@ li {
 
 img {
     padding: 25px;
+    padding-top: 5px;
+    padding-bottom: 35px;
+}
+
+main { 
+    font-family: 'Press Start 2P', cursive;
 }
 
