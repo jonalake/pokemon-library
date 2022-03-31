@@ -26,13 +26,26 @@ a:visited {
 .pokemon {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.pokemon-details {
+    display: inline-block;
+    justify-content: center;
+}
+
+figure {
+    width: 300px;
+    background-color: rgb(142, 204, 255);
+    padding: 50px;
+    border-radius: 25px;
+
 }
 
 figcaption {
     font-size: 28px;
     font-weight: 600;
-    color: red;
+    color: black;
 }
 
 li {
@@ -43,5 +56,9 @@ li {
 .ability-name {
     color: red;
     font-weight: 600;
+}
+
+img {
+    padding: 25px;
 }
 
