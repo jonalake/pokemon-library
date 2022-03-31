@@ -14,6 +14,19 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=50")
         return Promise.all(httpRequests)
     }).then(responses => {
         console.log(responses)
+        responses.map(response => {
+            const pokemonListing = document.createElement("div")
+            pokemonListing.classList = "pokemon-listing"
+            pokemonListing.innerHTML = `
+                <figure>
+                    <img src="${response.sprites.front_shiny}" alt="${response.species.name[0].toUpperCase()}${response.species.name.slice(1)}" />
+                    <figcaption><a href="pokemon.html?pokemon=${response.id}">${response.species.name[0].toUpperCase()}${response.species.name.slice(1)}</a></figcaption>
+                </figure>
+            `
+            return pokemonListing
+        }).forEach(pokeListing => {
+            main.append(pokeListing)
+        })
     })
 
 
