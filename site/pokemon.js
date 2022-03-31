@@ -5,7 +5,6 @@ const main = document.querySelector("main")
 fetch(`https://pokeapi.co/api/v2/pokemon/${queryString.get("pokemon")}`)
     .then(response => response.json())
     .then(response => {
-        console.log(response);
         const name = `${response.name[0].toUpperCase()}${response.name.slice(1)}`;
         const title = document.querySelector("title");
         title.textContent = name;
@@ -27,7 +26,6 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${queryString.get("pokemon")}`)
             })
         return Promise.all(abilitiesRequests)
     }).then(responses => {
-        console.log(responses)
         const ul = document.createElement("ul")
         ul.classList = "abilities"
         main.append(ul)
