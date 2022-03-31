@@ -1,3 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
 .spinner {
     width: 65px;
     margin-left: 50px;
@@ -6,3 +22,26 @@
 .hidden {
     display: none;
 }
+
+.pokemon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+figcaption {
+    font-size: 28px;
+    font-weight: 600;
+    color: red;
+}
+
+li {
+    list-style: none;
+    margin: 10px;
+}
+
+.ability-name {
+    color: red;
+    font-weight: 600;
+}
+

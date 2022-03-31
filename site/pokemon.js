@@ -41,6 +41,4 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${queryString.get("pokemon")}`)
         })
         const spinner = document.querySelector(".spinner")
         spinner.classList.add("hidden")
-
-
     })
