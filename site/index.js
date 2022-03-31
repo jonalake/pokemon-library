@@ -16,7 +16,6 @@ fetch("https://pokeapi.co/api/v2/pokemon?limit=50")
 
         return Promise.all(httpRequests)
     }).then(responses => {
-        console.log(responses)
         responses.map(response => {
             const pokemonListing = document.createElement("div")
             pokemonListing.classList = "pokemon-listing"
