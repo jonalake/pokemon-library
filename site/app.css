@@ -5,18 +5,29 @@
     text-align: center;
 }
 
+a {
+    color: #feca1b;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #feca1b;
+}
+
 h1 > a {
     font-family: 'Pokemon Solid', sans-serif;
     text-decoration: none;
     font-size: 72px;
+    color: #feca1b;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #3761a8; 
 }
 
-a {
-    color: black;
+h1 > a:visited {
+    color: #feca1b;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #3761a8;
 }
-
-a:visited {
-    color: black;
 }
 
 .spinner {
@@ -41,7 +52,7 @@ a:visited {
 
 figure {
     width: 300px;
-    background-color: rgb(142, 204, 255);
+    background-color: #3761a8;
     padding: 50px;
     border-radius: 25px;
 
@@ -50,7 +61,7 @@ figure {
 figcaption {
     font-size: 28px;
     font-weight: 600;
-    color: black;
+    color: #feca1b;
 }
 
 li {
