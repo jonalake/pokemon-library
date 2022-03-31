@@ -21,11 +21,7 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${queryString.get("pokemon")}`)
             <ul class="abilities">
             </ul>
         `;
+        const spinner = document.querySelector(".spinner")
+        spinner.classList.add("hidden")
         main.append(pokemonDetails);
     })
-
-
-    // < figure >
-    //  <img src="${response.sprites.front_shiny}" alt="${response.species.name[0].toUpperCase()}${response.species.name.slice(1)}" />
-    //                 <figcaption><a href="pokemon.html?pokemon=${response.id}">${response.species.name[0].toUpperCase()}${response.species.name.slice(1)}</a></figcaption>
-    //             </figure >
