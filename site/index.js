@@ -1,9 +1,5 @@
 const ul = document.querySelector("ul")
 
-// add spinner image to main before fetch
-// create "hidden class" display: none
-// right before append hide image
-
 fetch("https://pokeapi.co/api/v2/pokemon?limit=50&offset=3")
     .then(response => response.json())
     .then((response) => {
